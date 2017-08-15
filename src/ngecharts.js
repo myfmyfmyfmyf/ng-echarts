@@ -9,6 +9,7 @@ angular.module('ng-echarts',[])
                     var theme = (scope.config && scope.config.theme)
                         ? scope.config.theme : 'default';
                     var chart = echarts.init(element[0],theme);
+                    chart.clear();
                     if(scope.config && scope.config.dataLoaded === false){
                         chart.showLoading();
                     }
